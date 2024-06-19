@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="auction.root" owl="1">
+        <Header/>
+        <Container tname="mainScreen.name" component="mainScreen.component" mainScreenProps="mainScreenPropsFielded"/>
+        <Footer/>
+        <DialogContainer dialogs="dialogs"/>
+    </t>
+</templates>

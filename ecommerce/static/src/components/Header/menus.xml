@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="auction.menus" owl="1">
+        <MenuItem />
+    </t>
+
+    <t t-name="auction.menuItem" owl="1">
+        <div class="navigation d-flex justify-content-center">
+            <ul class="pt-1">
+                <li class="list active">
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-solid fa-hourglass-half"></i></span>
+                        <span class="text">Live</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-solid fa-hourglass-end"></i></span>
+                        <span class="text">Past</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-solid fa-hourglass-start"></i></span>
+                        <span class="text">Future</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-solid fa-star"></i></span>
+                        <span class="text">Favorites</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </t>
+</templates>
