@@ -1,5 +1,3 @@
-/** @odoo-module **/
-
 import { Component, useState, onMounted, useRef, reactive, useExternalListener } from "@odoo/owl";
 import { Header } from "./components/Header/header";
 import { Container } from "./components/Container/container";
@@ -9,8 +7,8 @@ import { registry } from "@web/core/registry";
 import { AuctionListContainer } from "./Screens/AuctionListContainer/AuctionListContainer";
 import { DialogContainer } from "./components/dialog/dialog_container";
 
-export class Auction extends Component {
-    static template = "auction.root";
+export class Ecommerce extends Component {
+    static template = "ecommerce.root";
 
     setup() {
         super.setup();
@@ -63,4 +61,4 @@ export class Auction extends Component {
     }
 }
 
-Auction.components = { Header, Container, Footer, DialogContainer }
+Ecommerce.components = { Header, Container, Footer, DialogContainer }

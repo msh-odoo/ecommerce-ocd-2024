@@ -1,12 +1,12 @@
 <odoo>
     <data>
-          <template id="auction.root" name="Auction House">
+          <template id="ecommerce.root" name="Shop">
             <html>
                 <head>
-                    <t t-call-assets="auction.assets_auction"/>
-                    <link rel="stylesheet" src="auction/static/src/css/auction.css"/>
+                    <t t-call-assets="ecommerce.assets_ecommerce"/>
+                    <link rel="stylesheet" src="auction/static/src/css/ecommerce.css"/>
                 </head>
-                <body class="o_auction">
+                <body class="o_shop">
                 </body>
             </html>
           </template>

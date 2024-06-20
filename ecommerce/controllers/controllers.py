@@ -3,14 +3,14 @@ from odoo.http import request, route
 
 class OwlPlayground(http.Controller):
 
-    @http.route(['/auction'], type='http', auth='public')
+    @http.route(['/shop_owl'], type='http', auth='public')
     def show_auction(self):
         """
-        Renders the owl auction page
+        Renders the owl ecommerce page
         """
-        return request.render('auction.root')
+        return request.render('ecommerce.root')
 
-    @http.route(['/get_auction_data'], type='json', auth='public')
+    @http.route(['/get_ecommerce_data'], type='json', auth='public')
     def get_auction_data(self, **kw):
         data = {}
         AuctionImages = request.env['auction.auction.images']
