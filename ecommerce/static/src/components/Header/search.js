@@ -1,7 +1,7 @@
 /** @odoo-module **/
 
 import { Component, onMounted, useRef } from "@odoo/owl";
-import { AlertDialog } from "../AlertDialog/AlertDialog";
+// import { AlertDialog } from "../AlertDialog/AlertDialog";
 
 export class Search extends Component {
     static template = "auction.search";
@@ -16,8 +16,8 @@ export class Search extends Component {
     }
 
     onClickSearch(ev) {
-        this.env.bus.trigger('add_dialog', { dialog: AlertDialog, props: {
-            'message': 'Search is not implemented yet!',
-        }});
+        // this.env.bus.trigger('add_dialog', { dialog: AlertDialog, props: {
+        //     'message': 'Search is not implemented yet!',
+        // }});
     }
 }

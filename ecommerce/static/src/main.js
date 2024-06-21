@@ -1,8 +1,9 @@
 import { browser } from "@web/core/browser/browser";
 import { rpc } from "./core/rpc.js";
 import { DB } from "./core/db.js";
-import { mount, EventBus } from "@odoo/owl";
-import { templates } from "@web/core/assets";
+import { App, EventBus } from "@odoo/owl";
+// import { templates } from "@web/core/assets";
+import { getTemplate } from "@web/core/templates";
 import { Ecommerce } from "./ecommerce";
 
 // The following code ensures that owl mount the component when ready.
@@ -11,11 +12,21 @@ import { Ecommerce } from "./ecommerce";
 // In the mount options, it's also possible to add other interresting
 // configuration: https://github.com/odoo/owl/blob/master/doc/reference/app.md#configuration
 
-owl.whenReady( () => {
+owl.whenReady(async () => {
     const bus = new EventBus();
     const db = new DB();
     const env = { bus, db, rpc };
-    mount(Ecommerce, document.body, { templates, dev: true, env });
+    const app = new App(Ecommerce, {
+        env,
+        getTemplate,
+        // dev: env.debug || session.test_mode,
+        // warnIfNoStaticProps: !session.test_mode,
+        name: Ecommerce.constructor.name,
+        // translatableAttributes: ["data-tooltip"],
+        // translateFn: _t,
+    });
+    const root = await app.mount(document.body);
+    // mount(Ecommerce, document.body, { dev: true, env });
 });
 
 /**

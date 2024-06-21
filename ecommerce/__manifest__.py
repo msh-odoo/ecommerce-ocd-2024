@@ -31,19 +31,13 @@
             'ecommerce/static/src/backend/**/*',
         ],
         'ecommerce.assets_ecommerce': [
-            # module loader
-            'web/static/src/module_loader.js',
-            'web/static/lib/owl/owl.js',
-            'web/static/lib/owl/odoo_module.js',
-            # core
-            'web/static/src/env.js',
-
-            # bootstrap
             ('include', 'web._assets_helpers'),
+            ('include', 'web._assets_core'),
             'web/static/src/scss/pre_variables.scss',
+            # bootstrap
             'web/static/lib/bootstrap/scss/_variables.scss',
             'web/static/lib/bootstrap/scss/_maps.scss',
-            ('include', 'web._assets_bootstrap'),
+            ('include', 'web._assets_bootstrap_frontend'),
             'web/static/lib/bootstrap/js/dist/util/index.js',
             'web/static/lib/bootstrap/js/dist/dom/data.js',
             'web/static/lib/bootstrap/js/dist/dom/event-handler.js',
@@ -87,6 +81,10 @@
             'web/static/src/core/assets.js',
 
             'ecommerce/static/src/**/*',
+            ('remove', 'ecommerce/static/src/components/AlertDialog/**/*'),
+            ('remove', 'ecommerce/static/src/components/BidDialog/**/*'),
+            ('remove', 'ecommerce/static/src/components/dialog/**/*'),
+
             'ecommerce/static/src/ecommerce.css',
         ],
     }

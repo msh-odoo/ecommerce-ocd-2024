@@ -5,7 +5,7 @@ import { Footer } from "./components/Footer/footer";
 import { registry } from "@web/core/registry";
 
 import { AuctionListContainer } from "./Screens/AuctionListContainer/AuctionListContainer";
-import { DialogContainer } from "./components/dialog/dialog_container";
+// import { DialogContainer } from "./components/dialog/dialog_container";
 
 export class Ecommerce extends Component {
     static template = "ecommerce.root";
@@ -61,4 +61,4 @@ export class Ecommerce extends Component {
     }
 }
 
-Ecommerce.components = { Header, Container, Footer, DialogContainer }
+Ecommerce.components = { Header, Container, Footer } // DialogContainer

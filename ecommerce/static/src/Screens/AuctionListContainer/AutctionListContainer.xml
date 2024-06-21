@@ -3,8 +3,8 @@
 
     <t t-name="auction.AuctionListContainer" owl="1">
         <div class="row" t-on-filterItems="onFilterItems">
-            <AuctionCategorySidebar categories="datas.categories"/>
-            <AuctionList auctionItems="state.items"/>
+            <AuctionCategorySidebar categories="datas.categories || []"/>
+            <AuctionList auctionItems="state.items || []"/>
         </div>
     </t>
 </templates>

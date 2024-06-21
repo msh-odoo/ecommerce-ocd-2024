@@ -11,16 +11,16 @@ class OwlPlayground(http.Controller):
         return request.render('ecommerce.root')
 
     @http.route(['/get_ecommerce_data'], type='json', auth='public')
-    def get_auction_data(self, **kw):
+    def get_ecommerce_data(self, **kw):
         data = {}
-        AuctionImages = request.env['auction.auction.images']
-        auctionItems = request.env['auction.auction'].search_read([])
-        categories = request.env['auction.category'].search_read([])
-        for auctionItem in auctionItems:
-            # TODO: MSH: Can optimized, instead of adding search in loop, we can collect all IDS and search one time and do some logical operations
-            image_ids = auctionItem.get('image_ids')
-            images = AuctionImages.search_read([('id', 'in', image_ids)])
-            auctionItem['images'] = images
-        data['auctionItems'] = auctionItems
-        data['categories'] = categories
+        # AuctionImages = request.env['auction.auction.images']
+        # auctionItems = request.env['auction.auction'].search_read([])
+        # categories = request.env['auction.category'].search_read([])
+        # for auctionItem in auctionItems:
+        #     # TODO: MSH: Can optimized, instead of adding search in loop, we can collect all IDS and search one time and do some logical operations
+        #     image_ids = auctionItem.get('image_ids')
+        #     images = AuctionImages.search_read([('id', 'in', image_ids)])
+        #     auctionItem['images'] = images
+        # data['auctionItems'] = auctionItems
+        # data['categories'] = categories
         return data

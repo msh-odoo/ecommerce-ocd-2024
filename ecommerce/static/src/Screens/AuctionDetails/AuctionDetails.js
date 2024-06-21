@@ -3,7 +3,7 @@
 import { Component } from "@odoo/owl";
 import { registry } from "@web/core/registry";
 import { Timer } from "../../components/Timer/Timer";
-import { BidDialog } from "../../components/BidDialog/BidDialog";
+// import { BidDialog } from "../../components/BidDialog/BidDialog";
 
 
 export class AuctionDetails extends Component {
@@ -16,9 +16,9 @@ export class AuctionDetails extends Component {
     }
 
     onPlaceBid(ev) {
-        this.env.bus.trigger('add_dialog', { dialog: BidDialog, props: {
-            'title': 'Place Bid',
-        }});
+        // this.env.bus.trigger('add_dialog', { dialog: BidDialog, props: {
+        //     'title': 'Place Bid',
+        // }});
     }
 }
 AuctionDetails.components = { Timer }

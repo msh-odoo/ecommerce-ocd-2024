@@ -44,6 +44,6 @@ export class DB extends EventBus {
 export function useFetchAuctions() {
     const env = useEnv();
     return () => {
-        return env.rpc("/get_auction_data", {});
+        return env.rpc("/get_ecommerce_data", {});
     }
 }
