@@ -6,21 +6,21 @@ import { Timer } from "../../components/Timer/Timer";
 // import { BidDialog } from "../../components/BidDialog/BidDialog";
 
 
-export class AuctionDetails extends Component {
-    static template = "auction.AuctionDetails";
+export class ProductDetails extends Component {
+    static template = "ecommerce.ProductDetails";
 
     setup() {
         super.setup();
-        this.auctionItem = this.props.detail.auctionItem;
-        this.endDate = moment(this.auctionItem.end_date, 'YYYY-MM-DD hh:mm:ss');
+        this.product = this.props.detail.product;
+        this.endDate = moment(this.product.end_date, 'YYYY-MM-DD hh:mm:ss');
     }
 
-    onPlaceBid(ev) {
+    onAddToCart(ev) {
         // this.env.bus.trigger('add_dialog', { dialog: BidDialog, props: {
         //     'title': 'Place Bid',
         // }});
     }
 }
-AuctionDetails.components = { Timer }
+ProductDetails.components = { Timer }
 
-registry.category("screens").add("AuctionDetails", AuctionDetails);
+registry.category("screens").add("ProductDetails", ProductDetails);

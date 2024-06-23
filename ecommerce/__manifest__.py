@@ -23,9 +23,9 @@
         'views/templates.xml',
         'views/ecommerce_views.xml',
     ],
-    'demo': [
-        'data/ecommerce_demo.xml',
-    ],
+    # 'demo': [
+    #     'data/ecommerce_demo.xml',
+    # ],
     'assets': {
         'web.assets_backend': [
             'ecommerce/static/src/backend/**/*',

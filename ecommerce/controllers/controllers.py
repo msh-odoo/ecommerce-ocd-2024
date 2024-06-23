@@ -4,7 +4,7 @@ from odoo.http import request, route
 class OwlPlayground(http.Controller):
 
     @http.route(['/shop_owl'], type='http', auth='public')
-    def show_auction(self):
+    def shop_owl(self):
         """
         Renders the owl ecommerce page
         """

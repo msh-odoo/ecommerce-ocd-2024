@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates xml:space="preserve">
 
-    <t t-name="auction.Timer" owl="1">
+    <t t-name="ecommerce.Timer" owl="1">
         <t t-if="props.displayFullTimer">
             <div class="timer_container d-flex">
                 <div>

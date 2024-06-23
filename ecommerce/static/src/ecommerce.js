@@ -4,7 +4,7 @@ import { Container } from "./components/Container/container";
 import { Footer } from "./components/Footer/footer";
 import { registry } from "@web/core/registry";
 
-import { AuctionListContainer } from "./Screens/AuctionListContainer/AuctionListContainer";
+import { ProductScreen } from "./Screens/ProductScreen/ProductScreen";
 // import { DialogContainer } from "./components/dialog/dialog_container";
 
 export class Ecommerce extends Component {
@@ -12,7 +12,7 @@ export class Ecommerce extends Component {
 
     setup() {
         super.setup();
-        this.mainScreen = useState({ name: 'AuctionList', component: AuctionListContainer });
+        this.mainScreen = useState({ name: 'ProductScreen', component: ProductScreen });
         this.env.bus.addEventListener("change_screen", this.onChangeScreen.bind(this));
         this.env.bus.addEventListener("add_dialog", this.onAddDialog.bind(this));
         this.mainScreenProps = {};

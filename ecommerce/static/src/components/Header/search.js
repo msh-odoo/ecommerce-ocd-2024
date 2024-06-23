@@ -4,7 +4,7 @@ import { Component, onMounted, useRef } from "@odoo/owl";
 // import { AlertDialog } from "../AlertDialog/AlertDialog";
 
 export class Search extends Component {
-    static template = "auction.search";
+    static template = "ecommerce.search";
 
     setup() {
         super.setup();
