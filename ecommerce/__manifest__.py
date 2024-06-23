@@ -15,7 +15,7 @@
     'category': 'Sales',
     'version': '0.1',
 
-    'depends': ['base', 'web'],
+    'depends': ['base', 'web', 'website_sale'],
     'application': True,
     'installable': True,
     'data': [
@@ -32,12 +32,16 @@
         ],
         'ecommerce.assets_ecommerce': [
             ('include', 'web._assets_helpers'),
-            ('include', 'web._assets_core'),
+            ('include', 'web._assets_frontend_helpers'),
+
             'web/static/src/scss/pre_variables.scss',
-            # bootstrap
             'web/static/lib/bootstrap/scss/_variables.scss',
+            'web/static/lib/bootstrap/scss/_variables-dark.scss',
             'web/static/lib/bootstrap/scss/_maps.scss',
+
             ('include', 'web._assets_bootstrap_frontend'),
+            ('include', 'web.assets_frontend_minimal'),
+            # bootstrap
             'web/static/lib/bootstrap/js/dist/util/index.js',
             'web/static/lib/bootstrap/js/dist/dom/data.js',
             'web/static/lib/bootstrap/js/dist/dom/event-handler.js',
@@ -72,8 +76,11 @@
             'web/static/src/libs/fontawesome/fonts/fontawesome-webfont.woff2',
             # 'web/static/src/legacy/js/promise_extension.js', # required by boot.js
             # 'web/static/src/boot.js', # odoo module system
-            'web/static/src/session.js', # expose __session_info__ containing server information
+            # 'web/static/src/session.js', # expose __session_info__ containing server information
+            'web/static/lib/owl/owl.js',
             'web/static/lib/owl/odoo_module.js', # to be able to import "@odoo/owl"
+            'web/static/src/core/template_inheritance.js',
+            'web/static/src/core/templates.js',
             'web/static/src/core/utils/functions.js',
             'web/static/src/core/utils/components.js',
             'web/static/src/core/browser/browser.js',

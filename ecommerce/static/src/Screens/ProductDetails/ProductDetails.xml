@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates xml:space="preserve">
 
-    <t t-name="ecommerce.ProductDetails" owl="1">
+    <t t-name="ecommerce.ProductDetails">
         <div class="o_products m-5">
             <div class="px-0 md:px-5 mx-50">
                 <div class="mx-auto d-flex flex-wrap lg:flex-nowrap space-x-0 md:space-x-4">

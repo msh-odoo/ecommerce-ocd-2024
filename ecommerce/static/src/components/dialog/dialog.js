@@ -1,4 +1,3 @@
-/** @odoo-module **/
 
 import { Component, useExternalListener, useRef, useChildSubEnv, useState } from "@odoo/owl";
 export class Dialog extends Component {

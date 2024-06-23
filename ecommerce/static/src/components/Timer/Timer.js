@@ -1,4 +1,3 @@
-/** @odoo-module **/
 
 import { Component, useState, onMounted } from "@odoo/owl";
 import { registry } from "@web/core/registry";

@@ -1,4 +1,3 @@
-/** @odoo-module **/
 
 import { Component } from "@odoo/owl";
 import { Menus } from "../Header/menus";

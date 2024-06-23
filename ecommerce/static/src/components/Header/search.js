@@ -1,4 +1,3 @@
-/** @odoo-module **/
 
 import { Component, onMounted, useRef } from "@odoo/owl";
 // import { AlertDialog } from "../AlertDialog/AlertDialog";

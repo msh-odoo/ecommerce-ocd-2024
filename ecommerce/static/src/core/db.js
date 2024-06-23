@@ -1,4 +1,3 @@
-/** @odoo-module **/
 
 import { EventBus, useEnv } from "@odoo/owl";
 

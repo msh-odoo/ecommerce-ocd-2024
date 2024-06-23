@@ -1,4 +1,3 @@
-/** @odoo-module **/
 
 import { Component } from "@odoo/owl";
 import { ProductItem } from "./ProductItem";

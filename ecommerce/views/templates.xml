@@ -3,6 +3,12 @@
           <template id="ecommerce.root" name="Shop">
             <html>
                 <head>
+                    <script id="web.layout.odooscript" type="text/javascript">
+                        var odoo = {
+                            csrf_token: "<t t-nocache="The csrf token must always be up to date." t-esc="request.csrf_token(None)"/>",
+                            debug: "<t t-esc="debug"/>",
+                        };
+                    </script>
                     <t t-call-assets="ecommerce.assets_ecommerce"/>
                     <link rel="stylesheet" src="auction/static/src/css/ecommerce.css"/>
                 </head>

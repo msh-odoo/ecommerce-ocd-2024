@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
 
-    <t t-name="web.Dialog" owl="1">
+    <t t-name="web.Dialog">
         <div class="o_dialog">
             <div role="dialog" class="modal d-block"
                 tabindex="-1"
@@ -34,7 +34,7 @@
         </div>
     </t>
 
-    <t t-name="web.Dialog.header" owl="1">
+    <t t-name="web.Dialog.header">
         <h4 class="modal-title text-break">
             <t t-out="props.title"/>
         </h4>

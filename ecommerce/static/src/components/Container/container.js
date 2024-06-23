@@ -1,4 +1,3 @@
-/** @odoo-module **/
 
 import { Component } from "@odoo/owl";
 import { ProductScreen } from "../../Screens/ProductScreen/ProductScreen";
