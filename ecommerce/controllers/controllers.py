@@ -15,8 +15,10 @@ class OwlPlayground(http.Controller):
         data = {}
         products = request.env['product.template'].sudo().search_read([('is_published', '=', True)], ['name', 'list_price', 'categ_id'], limit=20)
         product_tmpl_ids = [p.get('id') for p in products]
+        product_images = request.env['product.image'].sudo().search_read([('product_tmpl_id', 'in', product_tmpl_ids)], ['name', 'image_1920'], limit=20)
         categories = request.env['product.public.category'].sudo().search_read([('product_tmpl_ids', 'in', product_tmpl_ids)], ['name', 'parent_id'], limit=20)
         data['products'] = products
+        data['product_images'] = product_images
         data['categories'] = categories
 
         # AuctionImages = request.env['auction.auction.images']

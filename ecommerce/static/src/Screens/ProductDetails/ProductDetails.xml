@@ -17,7 +17,7 @@
                                 </div>
                                 <div class="carousel-inner">
                                     <t t-set="count" t-value="0"/>
-                                    <div t-attf-class="carousel-item {{count == 0 and 'active' or ''}}" t-foreach="product.images" t-as="image" t-key="image.id">
+                                    <div t-attf-class="carousel-item {{count == 0 and 'active' or ''}}" t-foreach="product.product_images or []" t-as="image" t-key="image.id">
                                         <img t-attf-src="data:image/png;base64,{{image.image_512}}" itemprop="image" class="o_detail_image img img-fluid h-100 w-100" t-att-alt="product.name" loading="lazy"/>
                                         <t t-set="count" t-value="count + 1"/>
                                     </div>
@@ -49,10 +49,10 @@
                                 <p> $2,000 </p>
                             </div>
                         </div>
-                        <div class="">
+                        <!-- <div class="">
                             <p class="text-600 uppercase"> Ending In:  </p>
                             <Timer endDatetime="endDate" displayFullTimer="true"/>
-                        </div>
+                        </div> -->
                         <div class="mt-4">
                             <button type="button" class="btn btn-primary" t-on-click="onAddToCart">Add To Cart</button>
                         </div>

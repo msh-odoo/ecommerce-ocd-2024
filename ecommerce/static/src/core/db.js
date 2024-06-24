@@ -34,9 +34,9 @@ export class DB extends EventBus {
 
     getProduct(id) {
         const datas = this.load('datas');
-        const auctions = datas.auctionItems;
-        const auction = auctions.find((auction) => auction.id === id);
-        return auction
+        const products = datas.products;
+        const product = products.find((product) => product.id === id);
+        return product;
     }
 }
 
