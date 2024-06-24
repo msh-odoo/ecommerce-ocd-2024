@@ -2,12 +2,12 @@
 <templates xml:space="preserve">
 
     <t t-name="ecommerce.search" owl="1">
-        <div class="bg-black w-full text-white mb-4">
+        <div class="bg-secondary w-full text-white mb-4">
             <div class="d-flex flex-col p-3 w-full justify-content-center">
                 <span class="fw-bold text-capitalize text-center me-3">Search for the products!!</span>
                 <div class="product_search">
                     <input type="input" class="o_input_search" t-ref="search_input"/>
-                    <button class="p-1 ms-1 bg-warning">
+                    <button class="p-1 ms-1 bg-info">
                         <i class="fa fa-search" t-on-click="onClickSearch"></i>
                     </button>
                 </div>

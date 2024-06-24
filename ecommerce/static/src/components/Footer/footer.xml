@@ -4,7 +4,7 @@
     <t t-name="ecommerce.footer">
         <footer class="o_footer position-sticky bottom-0">
             <Menus />
-            <div class="text-center bg-black text-white">© 2023 Odoo S.A. All Rights Reserved</div>
+            <div class="text-center bg-secondary text-white">© 2023 Odoo S.A. All Rights Reserved</div>
         </footer>
     </t>
 </templates>

@@ -7,6 +7,13 @@ import { registry } from "@web/core/registry";
 import { ProductScreen } from "./Screens/ProductScreen/ProductScreen";
 // import { DialogContainer } from "./components/dialog/dialog_container";
 
+
+// TODO: MSH: Add Favourite feature, add Heart Icon on header to display all saved favoruites
+// TODO: MSH: Add Cart button on header to display popup of added products in cart
+// TODO: MSH: Remove Dialog related stuff, we will not cover here
+// TODO: Need to add Search component with some props like model, so we can search on that model,
+// we will have generic model where we will write code for communication with model
+
 export class Ecommerce extends Component {
     static template = "ecommerce.root";
 
