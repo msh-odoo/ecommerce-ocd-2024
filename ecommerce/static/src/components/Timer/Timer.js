@@ -1,11 +1,10 @@
-/** @odoo-module **/
 
 import { Component, useState, onMounted } from "@odoo/owl";
 import { registry } from "@web/core/registry";
 
 
 export class Timer extends Component {
-    static template = "auction.Timer";
+    static template = "ecommerce.Timer";
 
     setup() {
         super.setup();

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates xml:space="preserve">
 
-    <t t-name="auction.AuctionDetails" owl="1">
-        <div class="o_auction_products m-5">
+    <t t-name="ecommerce.ProductDetails">
+        <div class="o_products m-5">
             <div class="px-0 md:px-5 mx-50">
                 <div class="mx-auto d-flex flex-wrap lg:flex-nowrap space-x-0 md:space-x-4">
                     <div class="col-2"></div>
@@ -17,8 +17,8 @@
                                 </div>
                                 <div class="carousel-inner">
                                     <t t-set="count" t-value="0"/>
-                                    <div t-attf-class="carousel-item {{count == 0 and 'active' or ''}}" t-foreach="auctionItem.images" t-as="image" t-key="image.id">
-                                        <img t-attf-src="data:image/png;base64,{{image.image_512}}" itemprop="image" class="o_detail_image img img-fluid h-100 w-100" t-att-alt="auctionItem.name" loading="lazy"/>
+                                    <div t-attf-class="carousel-item {{count == 0 and 'active' or ''}}" t-foreach="product.images" t-as="image" t-key="image.id">
+                                        <img t-attf-src="data:image/png;base64,{{image.image_512}}" itemprop="image" class="o_detail_image img img-fluid h-100 w-100" t-att-alt="product.name" loading="lazy"/>
                                         <t t-set="count" t-value="count + 1"/>
                                     </div>
                                 </div>
@@ -36,13 +36,13 @@
                     <div class="col-4 w-full px-5 flex flex-col flex-auto justify-between">
                         <div>
                             <span class="text-600 uppercase mb-2 block">Jimmy Butler</span>
-                            <h1 class="text-3xl font-header font-bold mb-4" t-out="auctionItem.name"/>
-                            <p class="leading-relaxed" t-out="auctionItem.description"/>
+                            <h1 class="text-3xl font-header font-bold mb-4" t-out="product.name"/>
+                            <p class="leading-relaxed" t-out="product.description"/>
                         </div>
                         <div class="d-flex flex-row mt-4 gap-4">
                             <div class="flex flex-col justify-between">
-                                <p class="text-500 uppercase"> Bid Price: </p>
-                                <p>$<t t-out="auctionItem.bid_price"/></p>
+                                <p class="text-500 uppercase"> Price: </p>
+                                <p>$<t t-out="product.price"/></p>
                             </div>
                             <div class="flex flex-col justify-between">
                                 <p class="text-500 uppercase"> Estimated Value </p>
@@ -54,7 +54,7 @@
                             <Timer endDatetime="endDate" displayFullTimer="true"/>
                         </div>
                         <div class="mt-4">
-                            <button type="button" class="btn btn-primary" t-on-click="onPlaceBid">Place Bid</button>
+                            <button type="button" class="btn btn-primary" t-on-click="onAddToCart">Add To Cart</button>
                         </div>
                     </div>
                 </div>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates xml:space="preserve">
 
-    <t t-name="auction.AuctionList" owl="1">
+    <t t-name="ecommerce.ProductList">
         <div class="col-9">
             <div class="row">
-                <t t-foreach="props.auctionItems" t-as="auctionItem" t-key="auctionItem.id">
-                    <AuctionItem auctionItem="auctionItem"/>
+                <t t-foreach="props.products" t-as="product" t-key="product.id">
+                    <ProductItem product="product"/>
                 </t>
             </div>
         </div>

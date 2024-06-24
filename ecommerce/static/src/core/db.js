@@ -1,4 +1,3 @@
-/** @odoo-module **/
 
 import { EventBus, useEnv } from "@odoo/owl";
 
@@ -20,7 +19,7 @@ export class DB extends EventBus {
         this.cache[name] = data;
     }
 
-    filterAuctionItems(categoryID) {
+    filterProducts(categoryID) {
         const datas = this.load('datas');
         const auctions = datas.auctionItems;
         debugger;
@@ -33,7 +32,7 @@ export class DB extends EventBus {
         }
     }
 
-    getAuctionItem(id) {
+    getProduct(id) {
         const datas = this.load('datas');
         const auctions = datas.auctionItems;
         const auction = auctions.find((auction) => auction.id === id);
@@ -41,9 +40,9 @@ export class DB extends EventBus {
     }
 }
 
-export function useFetchAuctions() {
+export function useFetchData() {
     const env = useEnv();
     return () => {
-        return env.rpc("/get_auction_data", {});
+        return env.rpc("/get_ecommerce_data", {});
     }
 }

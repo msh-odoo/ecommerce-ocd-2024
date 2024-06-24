@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="ecommerce.ProductItem">
+        <div class="col-3 pt-4">
+            <div class="oe_product_image position-relative h-100 flex-grow-0">
+                <a class="oe_product_image_link d-block h-100 position-relative"
+                    itemprop="url" contenteditable="false"
+                    t-att-data-id="props.product.id"
+                    t-on-click.prevent="onClickProduct">
+                    <div class="card">
+                        <img t-attf-src="/web/image/product.product/{{props.product.id}}/image_512" itemprop="image" class="prod_img img-fluid h-100 w-100" t-att-alt="props.product.name" loading="lazy"/>
+                        <div class="prod_desc">
+                            <h3 class="product_title"><t t-out="props.product.name"/></h3>
+                            <p class="product_desc" t-out="props.product.description"/>
+                            <p class="product_price"><b>₹<span t-out="props.product.price"></span></b></p>
+                            <button class="btn_product_details">Product Details</button>
+                            <!-- <i>
+                                <Timer endDatetime="endDate" displayFullTimer="false"/>
+                            </i> -->
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </t>
+</templates>

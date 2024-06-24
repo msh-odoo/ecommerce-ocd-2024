@@ -1,16 +1,14 @@
-/** @odoo-module **/
 
 import { Component } from "@odoo/owl";
-import { AuctionListContainer } from "../../Screens/AuctionListContainer/AuctionListContainer";
-import { AuctionDetails } from "../../Screens/AuctionDetails/AuctionDetails";
-
+import { ProductScreen } from "../../Screens/ProductScreen/ProductScreen";
+import { ProductDetails } from "../../Screens/ProductDetails/ProductDetails";
 
 
 export class Container extends Component {
-    static template = "auction.container";
+    static template = "ecommerce.container";
 }
 
-Container.components = { AuctionListContainer, AuctionDetails };
+Container.components = { ProductScreen, ProductDetails };
 
 Container.props = {
     mainScreenProps: { type: Object, optional: true },

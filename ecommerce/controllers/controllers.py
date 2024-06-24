@@ -3,24 +3,30 @@ from odoo.http import request, route
 
 class OwlPlayground(http.Controller):
 
-    @http.route(['/auction'], type='http', auth='public')
-    def show_auction(self):
+    @http.route(['/shop_owl'], type='http', auth='public')
+    def shop_owl(self):
         """
-        Renders the owl auction page
+        Renders the owl ecommerce page
         """
-        return request.render('auction.root')
+        return request.render('ecommerce.root')
 
-    @http.route(['/get_auction_data'], type='json', auth='public')
-    def get_auction_data(self, **kw):
+    @http.route(['/get_ecommerce_data'], type='json', auth='public')
+    def get_ecommerce_data(self, **kw):
         data = {}
-        AuctionImages = request.env['auction.auction.images']
-        auctionItems = request.env['auction.auction'].search_read([])
-        categories = request.env['auction.category'].search_read([])
-        for auctionItem in auctionItems:
-            # TODO: MSH: Can optimized, instead of adding search in loop, we can collect all IDS and search one time and do some logical operations
-            image_ids = auctionItem.get('image_ids')
-            images = AuctionImages.search_read([('id', 'in', image_ids)])
-            auctionItem['images'] = images
-        data['auctionItems'] = auctionItems
+        products = request.env['product.template'].sudo().search_read([('is_published', '=', True)], ['name', 'list_price', 'categ_id'], limit=20)
+        product_tmpl_ids = [p.get('id') for p in products]
+        categories = request.env['product.public.category'].sudo().search_read([('product_tmpl_ids', 'in', product_tmpl_ids)], ['name', 'parent_id'], limit=20)
+        data['products'] = products
         data['categories'] = categories
+
+        # AuctionImages = request.env['auction.auction.images']
+        # auctionItems = request.env['auction.auction'].search_read([])
+        # categories = request.env['auction.category'].search_read([])
+        # for auctionItem in auctionItems:
+        #     # TODO: MSH: Can optimized, instead of adding search in loop, we can collect all IDS and search one time and do some logical operations
+        #     image_ids = auctionItem.get('image_ids')
+        #     images = AuctionImages.search_read([('id', 'in', image_ids)])
+        #     auctionItem['images'] = images
+        # data['auctionItems'] = auctionItems
+        # data['categories'] = categories
         return data

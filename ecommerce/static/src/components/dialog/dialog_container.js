@@ -1,4 +1,3 @@
-/** @odoo-module **/
 
 import { WithEnv } from "../../utils/withenv";
 import { Component, xml } from "@odoo/owl";

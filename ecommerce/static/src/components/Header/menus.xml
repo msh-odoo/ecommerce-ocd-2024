@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates xml:space="preserve">
 
-    <t t-name="auction.menus" owl="1">
+    <t t-name="ecommerce.menus">
         <MenuItem />
     </t>
 
-    <t t-name="auction.menuItem" owl="1">
+    <t t-name="ecommerce.menuItem">
         <div class="navigation d-flex justify-content-center">
             <ul class="pt-1">
                 <li class="list active">
