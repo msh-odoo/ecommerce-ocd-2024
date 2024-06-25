@@ -22,7 +22,6 @@ export class DB extends EventBus {
     filterProducts(categoryID) {
         const datas = this.load('datas');
         const auctions = datas.auctionItems;
-        debugger;
         if (categoryID === 'all') {
             return auctions;
         } else {

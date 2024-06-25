@@ -7,7 +7,7 @@
                 <div class="mx-auto d-flex flex-wrap lg:flex-nowrap space-x-0 md:space-x-4">
                     <div class="col-2"></div>
                     <div class="card">
-                        <div class="w-full lg:h-auto">
+                        <div class="w-full h-100">
                             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-indicators">
                                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -17,8 +17,8 @@
                                 </div>
                                 <div class="carousel-inner">
                                     <t t-set="count" t-value="0"/>
-                                    <div t-attf-class="carousel-item {{count == 0 and 'active' or ''}}" t-foreach="product.product_images or []" t-as="image" t-key="image.id">
-                                        <img t-attf-src="data:image/png;base64,{{image.image_512}}" itemprop="image" class="o_detail_image img img-fluid h-100 w-100" t-att-alt="product.name" loading="lazy"/>
+                                    <div t-attf-class="carousel-item {{count == 0 and 'active' or ''}}" t-foreach="product.images or []" t-as="image" t-key="image.id">
+                                        <img t-attf-src="data:image/png;base64,{{image.image_1920}}" itemprop="image" class="o_detail_image img img-fluid h-100 w-100" t-att-alt="product.name" loading="lazy"/>
                                         <t t-set="count" t-value="count + 1"/>
                                     </div>
                                 </div>
