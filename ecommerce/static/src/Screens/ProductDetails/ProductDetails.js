@@ -11,7 +11,7 @@ export class ProductDetails extends Component {
     setup() {
         super.setup();
         this.product = this.props.detail.product;
-        this.endDate = moment(this.product.end_date, 'YYYY-MM-DD hh:mm:ss');
+        // this.endDate = moment(this.product.end_date, 'YYYY-MM-DD hh:mm:ss');
     }
 
     onAddToCart(ev) {

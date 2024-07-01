@@ -13,7 +13,7 @@
                         <div class="prod_desc">
                             <h3 class="product_title"><t t-out="props.product.name"/></h3>
                             <p class="product_desc" t-out="props.product.description"/>
-                            <p class="product_price"><b>₹<span t-out="props.product.price"></span></b></p>
+                            <p class="product_price"><b>₹<span t-out="props.product.list_price"></span></b></p>
                             <button class="btn_product_details">Product Details</button>
                             <!-- <i>
                                 <Timer endDatetime="endDate" displayFullTimer="false"/>

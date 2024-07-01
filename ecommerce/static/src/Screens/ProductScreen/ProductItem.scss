@@ -1,3 +1,6 @@
+.oe_product_image_link {
+    cursor: pointer;
+}
 .card {
     width: 300px;
     height: 500px;
@@ -31,10 +34,9 @@
     transition: 0.8s;
 }
 
-.card:hover .prod_desc {
-    right: 0;
-
-}
+// .card:hover .prod_desc {
+//     right: 0;
+// }
 
 .bid_title {
     text-transform: uppercase;
@@ -68,7 +70,7 @@
     cursor: pointer;
 }
 
-.prod_desc i{
+.prod_desc i {
     position: absolute;
     top: 10px;
     right: -15px;
