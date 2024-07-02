@@ -2,12 +2,25 @@
 <templates xml:space="preserve">
 
     <t t-name="ecommerce.ProductList">
-        <div class="col-9">
+        <div class="product-listing">
+            <div class="title-search">
+                <div class="product-heading">
+                    <h2>Products</h2>
+                </div>
+                <div class="search-bar">
+                    <input class="search__input" id="search-input" type="text" placeholder="Search" />
+                </div>
+            </div>
+            <div id="products-container" class="clearfix">
+                <!-- Products will be loaded here dynamically -->
+            </div>
+        </div>
+        <!-- <div class="col-9">
             <div class="row">
                 <t t-foreach="props.products" t-as="product" t-key="product.id">
                     <ProductItem product="product"/>
                 </t>
             </div>
-        </div>
+        </div> -->
     </t>
 </templates>

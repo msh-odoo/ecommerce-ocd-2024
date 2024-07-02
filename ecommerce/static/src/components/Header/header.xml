@@ -2,11 +2,49 @@
 <templates xml:space="preserve">
 
     <t t-name="ecommerce.header" owl="1">
-        <div class="row p-3">
+        <div class="header">
+            <div class="header-row">
+                <div class="logo">
+                    <a href="#">
+                        <img src="/ecommerce/static/src/images/logo-2-removebg-preview.png" alt="" />
+                    </a>
+                </div>
+                <div class="header-items">
+                    <a href="#">MEN</a>
+                    <a href="#">WOMEN</a>
+                    <a href="#">KIDS</a>
+                    <a href="#">NEW</a>
+                    <a href="#">OFFERS</a>
+                    <a href="#">ABOUT US</a>
+
+                </div>
+                <!-- <div class="search-bar">
+                    <input class="search__input" id="search-input" type="text" placeholder="Search">
+                </div> -->
+                <div class="icons">
+                    <span id="wishlist-icon "><i class="fa-regular fa-heart fa-xl" style="color: #ffffff;"></i></span>
+                    <span id="cart-icon"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #ffffff;"></i></span>
+                    <span id="profile-icon"><i class="fa-regular fa-user fa-xl" style="color: #ffffff;"></i></span>
+                </div>
+            </div>
+            <div class="categories">
+                <div data-category="category1"><a href="#">Sneakers</a></div>
+                <div data-category="category2"><a href="#">Loafer</a></div>
+                <div data-category="category3"><a href="#">Boat shoes</a></div>
+                <div data-category="category4"><a href="#">Running shoes</a></div>
+                <div data-category="category5"><a href="#">Sport shoes</a></div>
+                <div data-category="category6"><a href="#">Sandal</a></div>
+                <div data-category="category7"><a href="#">Fashion boot</a></div>
+                <div data-category="category8"><a href="#">Flats</a></div>
+                <div data-category="category9"><a href="#">Slide</a></div>
+                <div data-category="category10"><a href="#">Slippers</a></div>
+            </div>
+        </div>
+        <!-- <div class="row p-3">
             <div class="d-flex justify-content-center mb-4" t-on-click="onClickLogo">
                 <div class="ecommerce_title">E-Commerce</div>
             </div>
             <Search />
-        </div>
+        </div> -->
     </t>
 </templates>

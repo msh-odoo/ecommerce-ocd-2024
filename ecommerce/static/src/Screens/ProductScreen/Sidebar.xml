@@ -2,13 +2,61 @@
 <templates xml:space="preserve">
 
     <t t-name="ecommerce.Sidebar">
-        <div class="col-2 o_category_list text-center mt-4" t-ref="category_element">
-            <div class="category active" data-id="all" t-on-click="onClickCategory">
-                <span>All</span>
-            </div>
-            <div t-foreach="props.categories" t-as="category" t-key="category.id" class="category" t-att-data-id="category.id" t-on-click="onClickCategory">
-                <span t-out="category.name"></span>
-            </div>
+        <div class="filters col-3">
+            <h2>Filters</h2>
+            <form id="filters-form">
+                <!-- Brand Filter -->
+                <div class="filter">
+                    <label><p>Brand:</p></label>
+                    <div><input type="checkbox" name="brand" value="Nike" /> Nike</div>
+                    <div><input type="checkbox" name="brand" value="Puma" /> Puma</div>
+                    <div><input type="checkbox" name="brand" value="Roadster" /> Roadster</div>
+                    <div><input type="checkbox" name="brand" value="Skechers" /> Skechers</div>
+                    <div><input type="checkbox" name="brand" value="Reebok" /> Reebok</div>
+                    <div><input type="checkbox" name="brand" value="Adidas" /> Adidas</div>
+                    <div><input type="checkbox" name="brand" value="Bata" /> Bata</div>
+                    <div><input type="checkbox" name="brand" value="Campus" /> Campus</div>
+                </div>
+                <!-- Price Range Filter as Checkboxes -->
+                <div class="filter">
+                    <label><p>Price Range:</p></label>
+                    <div><input type="checkbox" name="price-range" value="1000-5000" /> ₹1000 - ₹5000</div>
+                    <div><input type="checkbox" name="price-range" value="5000-10000" /> ₹6000 - ₹10000</div>
+                    <div><input type="checkbox" name="price-range" value="10000-20000" /> ₹11000 - ₹15000</div>
+                    <div><input type="checkbox" name="price-range" value="20000-30000" /> ₹16000 - ₹20000</div>
+                    <div><input type="checkbox" name="price-range" value="30000-50000" /> ₹21000 - ₹25000</div>
+                    <div><input type="checkbox" name="price-range" value="100000+" /> ₹25000+</div>
+                </div>
+                <!-- RAM Filter -->
+                 <div class="filter">
+                    <label><p>Color:</p></label>
+                    <div><input type="checkbox" name="color" value="Orange" /> Orange</div>
+                    <div><input type="checkbox" name="color" value="Red" /> Red</div>
+                    <div><input type="checkbox" name="color" value="Blue" /> Blue</div>
+                    <div><input type="checkbox" name="color" value="Gray" /> Gray</div>
+                </div>
+
+                <!-- Customer Rating Filter -->
+                <div class="filter">
+                    <label><p>Customer Rating:</p></label>
+                    <div><label><input type="checkbox" name="rating" value="4.5" /> Above 4.5 stars</label></div>
+                    <div><label><input type="checkbox" name="rating" value="4" /> Above 4 stars</label></div>
+                    <div><label><input type="checkbox" name="rating" value="3" /> Above 3 stars</label></div>
+                    <div><label><input type="checkbox" name="rating" value="2" /> Above 2 stars</label></div>
+                    <div><label><input type="checkbox" name="rating" value="1" /> Above 1 star</label></div>
+                </div>
+                <!-- <button type="submit">Apply Filters</button> -->
+            </form>
+            <!-- 
+                <div class="col-2 o_category_list text-center mt-4" t-ref="category_element">
+        -            <div class="category active" data-id="all" t-on-click="onClickCategory">
+        -                <span>All</span>
+        -            </div>
+        -            <div t-foreach="props.categories" t-as="category" t-key="category.id" class="category" t-att-data-id="category.id" t-on-click="onClickCategory">
+        -                <span t-out="category.name"></span>
+        -            </div>
+                </div>
+             -->
         </div>
     </t>
 </templates>

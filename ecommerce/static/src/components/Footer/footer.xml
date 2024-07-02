@@ -2,9 +2,59 @@
 <templates xml:space="preserve">
 
     <t t-name="ecommerce.footer">
-        <footer class="o_footer position-sticky bottom-0">
-            <Menus />
-            <div class="text-center bg-secondary text-white">© 2023 Odoo S.A. All Rights Reserved</div>
+        <footer class="o_footer">
+            <div class="footer">
+                <div class="footer-details">
+                    <div class="logo-colomn">
+                        <img src="/ecommerce/static/src/images/logo-2-removebg-preview.png" alt="" />
+                        <p>The next generation of shoes collections.</p>
+                        <div class="social-logos">
+                            <div class="facebook">
+                                <i class="fa-brands fa-facebook-f fa-xl" style="color: #ffffff;"></i>
+                            </div>
+                            <div class="instagram">
+                                <i class="fa-brands fa-instagram fa-xl" style="color: #ffffff;"></i>
+                            </div>
+                            <div class="twitter">
+                                <i class="fa-brands fa-x-twitter fa-xl" style="color: #ffffff;"></i>
+                            </div>
+                            <div class="pinterest">
+                                <i class="fa-brands fa-pinterest-p fa-xl" style="color: #ffffff;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="company">
+                        <h3>Company</h3>
+                        <p>About Us</p>
+                        <p>Careers</p>
+                        <p>Press</p>
+                        <p>Blog</p>
+                    </div>
+                    <div class="pages">
+                        <h3>Pages</h3>
+                        <p>Login</p>
+                        <p>Register</p>
+                        <p>Men Collection</p>
+                        <p>Women Collection</p>
+                    </div>
+                    <div class="legal">
+                        <h3>Legal</h3>
+                        <p>Terms</p>
+                        <p>About Us</p>
+                        <p>Team</p>
+                        <p>Privacy</p>
+                    </div>
+                    <div class="resources">
+                        <h3>Resources</h3>
+                        <p>Blog</p>
+                        <p>Service</p>
+                        <p>Product</p>
+                        <p>Pricing</p>
+                    </div>
+                </div>
+            </div>
+            <!-- <Menus />
+            <div class="text-center bg-secondary text-white">© 2023 Odoo S.A. All Rights Reserved</div> -->
         </footer>
     </t>
 </templates>
